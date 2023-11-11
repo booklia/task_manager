@@ -1,0 +1,24 @@
+.text-input {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.text-input--element {
+    width: 100%;
+    border: 2px solid #E2E2E2;
+    padding: 8px 10px;
+    color: #333;
+}
+.text-input--element:active, .text-input--element:focus {
+    border-color: #BDBDBD;
+    outline: none;
+}
+
+.text-input--element::-webkit-input-placeholder {
+    color: #E2E2E2;
+}
+
+.label {
+    display: flex;
+    gap: 20px;
+}
