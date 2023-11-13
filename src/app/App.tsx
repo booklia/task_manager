@@ -2,13 +2,12 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import { GlobalResets } from "../tokens/resets";
-import Column from "../components/elements/column/Column";
+import Menu from "../components/blocks/menu/Menu";
 import "./style.css";
 const App = () => {
   return (
     <>
       <GlobalResets />
-      <Column />
       {/*/!*input*!/*/}
       {/*<div className="text-input">*/}
       {/*  <Text tagName="h3" texttype="inputHead">*/}

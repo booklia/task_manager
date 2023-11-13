@@ -18,6 +18,15 @@ const Column = () => {
       <Card />
       <Card />
       <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </StyledColumn>
   );
 };

@@ -1,16 +1,22 @@
 import React from "react";
 import Menu from "../../components/blocks/menu/Menu";
 import Board from "../../components/blocks/board/Board";
+import styled from "styled-components";
 import ModalContainer from "../../components/blocks/modalContainer/ModalContainer";
 
 const Dashboard = () => {
   return (
-    <div className="dashboard-page">
+    <StyledDashboard>
       <Menu />
       <Board />
-      <ModalContainer />
-    </div>
+      {/*<ModalContainer />*/}
+    </StyledDashboard>
   );
 };
+
+const StyledDashboard = styled.div`
+  display: flex;
+  width: 100vw;
+`;
 
 export default Dashboard;
