@@ -9,12 +9,15 @@ const COLOR = {
   ACTIVE_COLOR: "#593CAC",
   DISABLED_COLOR: "#BDBDBD",
   TEXT_CONDITION_COLOR: "#FFFFFF",
+  TEXT_DELETE: "#333333",
 };
 
 const ButtonType = {
   MAIN: "main",
   MODAL: "modal",
   MENU: "menu",
+  DELETE: "delete",
+  DELETE_CANCEL: "delete-cancel",
 };
 
 const ButtonStyle = {
@@ -31,6 +34,18 @@ const ButtonStyle = {
     background-color: ${COLOR.BACKGROUND_MAIN};
     color: ${COLOR.TEXT_MAIN};
     border-radius: 0 20px 20px 0;
+  `,
+  [ButtonType.MODAL]: css`
+    width: 100%;
+    background-color: ${COLOR.BACKGROUND_MODAL};
+    color: ${COLOR.TEXT_MODAL};
+  `,
+  [ButtonType.DELETE]: css`
+    color: ${COLOR.TEXT_DELETE};
+  `,
+  [ButtonType.DELETE_CANCEL]: css`
+    color: ${COLOR.TEXT_DELETE};
+    background-color: ${COLOR.DISABLED_COLOR};
   `,
 };
 

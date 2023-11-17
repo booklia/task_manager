@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Data } from "../store/data";
 import { Project } from "../store/data";
 
-let initialState = {
+const initialState = {
   projectasdf1: {
     id: "projectasdf1",
     name: "projectasdf",
@@ -356,7 +355,7 @@ let initialState = {
   },
 };
 const ProjectsSlice = createSlice({
-  name: "currentProject",
+  name: "projects",
   initialState,
   reducers: {
     addProject: (state, action: { payload: Project; type: string }) => {

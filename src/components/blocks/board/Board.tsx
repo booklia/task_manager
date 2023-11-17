@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "../../ui-kit/text/StyledText";
 import Column from "../../elements/column/Column";
 import styled from "styled-components";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Store } from "../../../store/data";
 
 const Board = () => {

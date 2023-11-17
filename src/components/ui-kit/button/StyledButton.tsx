@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ButtonStyle, COLOR } from "./consts";
 
 type Props = {
@@ -14,7 +14,7 @@ const StyledButton = styled.button<Props>`
   letter-spacing: 0;
   cursor: pointer;
   border-radius: 7px;
-  ${({ buttontype }) => ButtonStyle[buttontype]}
+  ${({ buttontype }) => buttontype.split(" ").map((el) => ButtonStyle[el])}
   &:hover {
     background-color: ${COLOR.HOVER_COLOR};
     color: ${COLOR.TEXT_CONDITION_COLOR};

@@ -44,4 +44,9 @@ export type Store = {
   projects: {
     [k: ProjectId]: Project;
   };
+  modal: {
+    type: string;
+    operation: string;
+    elementId: string;
+  };
 };
