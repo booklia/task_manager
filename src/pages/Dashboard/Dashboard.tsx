@@ -5,13 +5,13 @@ import styled from "styled-components";
 import ModalContainer from "../../components/blocks/modalContainer/ModalContainer";
 
 const Dashboard = () => {
-  return (
-    <StyledDashboard>
-      <Menu />
-      <Board />
-      {/*<ModalContainer />*/}
-    </StyledDashboard>
-  );
+    return (
+        <StyledDashboard>
+            <Menu/>
+            <Board/>
+            {/*<ModalContainer />*/}
+        </StyledDashboard>
+    );
 };
 
 const StyledDashboard = styled.div`

@@ -2,26 +2,25 @@ import React from "react";
 import { Text } from "../../ui-kit/text/StyledText";
 import Column from "../../elements/column/Column";
 import styled from "styled-components";
+import { useSelector, useDispatch } from "react-redux";
+import { Store } from "../../../store/data";
 
 const Board = () => {
+  const currentProject = useSelector(
+    (state: Store) => state.projects[state.currentProject]
+  );
   return (
     <StyledSection>
       <StyledHeader>
         <Text tagName="h2" texttype="projectName">
-          Project1
+          {currentProject.name}
         </Text>
         <button>опции</button>
       </StyledHeader>
       <StyledBoard>
-        <Column />
-        <Column />
-        <Column />
-        <Column />
-        <Column />
-        <Column />
-        <Column />
-        <Column />
-        <Column />
+        {Object.keys(currentProject.columns).map((el) => (
+          <Column key={el} columnData={currentProject.columns[el]} />
+        ))}
       </StyledBoard>
     </StyledSection>
   );

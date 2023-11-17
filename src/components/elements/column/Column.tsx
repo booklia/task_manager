@@ -1,32 +1,25 @@
 import styled from "styled-components";
 import Card from "../card/Card";
 import { Text } from "../../ui-kit/text/StyledText";
+import { Column as ColumnType } from "../../../store/data";
 
 const ColumnIcon = ({ color, ...rest }: { color: string }) => (
   <span color={color} {...rest}></span>
 );
 
-const Column = () => {
+const Column = ({ columnData }: { columnData: ColumnType }) => {
+  console.log(columnData);
   return (
     <StyledColumn>
       <StyledHeading>
-        <ColoredSpan color="green" />
+        <ColoredSpan color={columnData.color} />
         <Text tagName="h3" texttype="columnName">
-          Заголовок
+          {columnData.name}
         </Text>
       </StyledHeading>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {Object.keys(columnData.tasks).map((el) => (
+        <Card key={el} taskData={columnData.tasks[el]} />
+      ))}
     </StyledColumn>
   );
 };

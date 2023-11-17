@@ -2,8 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { Text } from "../../ui-kit/text/StyledText";
 import { Button } from "../../ui-kit/button/StyledButton";
+import { useSelector, useDispatch } from "react-redux";
+import { switchProject } from "../../../reducers/currentProjectReducer";
+import { Store } from "../../../store/data";
 
 const Menu = () => {
+  const ids = useSelector((state: Store) =>
+    Object.keys(state.projects).map((el) => [el, state.projects[el].name])
+  );
+  const currentProject = useSelector((state: Store) => state.currentProject);
+  const dispatch = useDispatch();
+  console.log(ids, currentProject);
   return (
     <StyledSection>
       <StyledLogo>
@@ -12,9 +21,15 @@ const Menu = () => {
         </Text>
       </StyledLogo>
       <StyledProjects>
-        <Button buttontype="menu">Project1</Button>
-        <Button buttontype="menu">Project2</Button>
-        <Button buttontype="menu">Project3</Button>
+        {ids.map((el) => (
+          <Button
+            key={el[0]}
+            buttontype={`menu${el[0] === currentProject ? " active" : ""}`}
+            onClick={() => dispatch(switchProject(el[0]))}
+          >
+            {el[1]}
+          </Button>
+        ))}
       </StyledProjects>
       <div className="menu__themes"></div>
     </StyledSection>

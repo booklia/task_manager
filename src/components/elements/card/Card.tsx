@@ -1,13 +1,17 @@
 import { Text } from "../../ui-kit/text/StyledText";
 import styled from "styled-components";
-const Card = () => {
+import { Task } from "../../../store/data";
+
+const Card = ({ taskData }: { taskData: Task }) => {
   return (
     <StyledCard>
       <Text tagName="h3" texttype="taskName">
-        Всем привет
+        {taskData.header}
       </Text>
       <Text tagName="p" texttype="subtasks">
-        Всем привет
+        Сделано{" "}
+        {taskData.subtasks.reduce((el, s) => (s.status ? el + 1 : el), 0)} из{" "}
+        {taskData.subtasks.length} подзадач.
       </Text>
     </StyledCard>
   );
