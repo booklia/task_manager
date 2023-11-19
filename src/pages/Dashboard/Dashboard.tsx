@@ -7,8 +7,8 @@ import ModalContainer from "../../components/blocks/modalContainer/ModalContaine
 const Dashboard = () => {
   return (
     <StyledDashboard>
-      {/*<Menu/>*/}
-      {/*<Board/>*/}
+      <Menu />
+      <Board />
       <ModalContainer />
     </StyledDashboard>
   );

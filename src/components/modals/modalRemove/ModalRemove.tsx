@@ -34,6 +34,7 @@ const StyledModal = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin: 15% auto;
 `;
 
 const StyledH = styled.h3`
