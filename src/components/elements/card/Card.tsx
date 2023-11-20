@@ -1,6 +1,6 @@
 import { Text } from "../../ui-kit/text/StyledText";
 import styled from "styled-components";
-import { Task } from "../../../store/data";
+import { Task } from "../../../data/store/data";
 
 const Card = ({ taskData }: { taskData: Task }) => {
   return (

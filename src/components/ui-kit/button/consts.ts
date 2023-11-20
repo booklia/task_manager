@@ -18,7 +18,7 @@ const ButtonType = {
   MENU: "menu",
   DELETE: "delete",
   DELETE_CANCEL: "delete-cancel",
-};
+} as const;
 
 const ButtonStyle = {
   [ButtonType.MAIN]: css`
@@ -29,16 +29,15 @@ const ButtonStyle = {
     width: 100%;
     background-color: ${COLOR.BACKGROUND_MODAL};
     color: ${COLOR.TEXT_MODAL};
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 24px;
+    border: 1px solid ${COLOR.TEXT_MODAL};
   `,
   [ButtonType.MENU]: css`
     background-color: ${COLOR.BACKGROUND_MAIN};
     color: ${COLOR.TEXT_MAIN};
     border-radius: 0 20px 20px 0;
-  `,
-  [ButtonType.MODAL]: css`
-    width: 100%;
-    background-color: ${COLOR.BACKGROUND_MODAL};
-    color: ${COLOR.TEXT_MODAL};
   `,
   [ButtonType.DELETE]: css`
     color: ${COLOR.TEXT_DELETE};

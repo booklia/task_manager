@@ -1,11 +1,11 @@
 import React from "react";
-import ModalCreate from "../../modals/modalCreate/ModalCreate";
-import ModalEdit from "../../modals/modalEdit/ModalEdit";
+import ModalCreate from "../modalCreate/ModalCreate";
+import ModalEdit from "../modalEdit/ModalEdit";
 import styled from "styled-components";
-import ModalRemove from "../../modals/modalRemove/ModalRemove";
-import ModalTask from "../../modals/modalTask/ModalTask";
+import ModalRemove from "../modalRemove/ModalRemove";
+import ModalTask from "../modalTask/ModalTask";
 import { useSelector } from "react-redux";
-import { Store } from "../../../store/data";
+import { Store } from "../../../data/store/data";
 const ModalContainer = () => {
   const modalState = useSelector((state: Store) => state.modal);
   return (
@@ -31,7 +31,6 @@ const StyledModalContainer = styled.div`
   position: fixed;
   width: 100%;
   height: 100%;
-  cursor: pointer;
   z-index: 1;
 `;
 

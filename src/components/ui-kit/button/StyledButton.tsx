@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
-import { ButtonStyle, COLOR } from "./consts";
+import { ButtonStyle, COLOR, ButtonType } from "./consts";
 
 type Props = {
-  buttontype: string;
+  buttontype: typeof ButtonType[keyof typeof ButtonType];
 };
 
 const StyledButton = styled.button<Props>`
@@ -14,7 +14,10 @@ const StyledButton = styled.button<Props>`
   letter-spacing: 0;
   cursor: pointer;
   border-radius: 7px;
-  ${({ buttontype }) => buttontype.split(" ").map((el) => ButtonStyle[el])}
+  ${({ buttontype }) => {
+    console.log(ButtonStyle[buttontype], buttontype);
+    return ButtonStyle[buttontype];
+  }}
   &:hover {
     background-color: ${COLOR.HOVER_COLOR};
     color: ${COLOR.TEXT_CONDITION_COLOR};

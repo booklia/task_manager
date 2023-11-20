@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { COLOR, TextStyles } from "./consts";
+import { COLOR, TextStyles, TEXT_TYPE } from "./consts";
 import React from "react";
 
 type Props = {
-  texttype: string;
-  color?: boolean;
+  texttype: typeof TEXT_TYPE[keyof typeof TEXT_TYPE];
+  color?: keyof typeof COLOR;
 };
 
 type TextProps = {
@@ -18,8 +18,13 @@ const Text = ({ tagName, ...otherProps }: TextProps) => {
 const StyledText = styled(Text)<Props>`
   font-family: "Montserrat", sans-serif;
   font-weight: ${({ tagName }) => (tagName.includes("h") ? 700 : 400)};
-  color: ${({ color }) => (color ? COLOR.TEXT_SUBHEADING : COLOR.TEXT_MAIN)};
   ${({ texttype }) => TextStyles[texttype]}
+  color: ${({ color }) => {
+    if (!color) {
+      return COLOR.TEXT_MAIN;
+    }
+    return COLOR[color];
+  }};
 `;
 
 export { StyledText as Text };

@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Text } from "../../ui-kit/text/StyledText";
 import { Button } from "../../ui-kit/button/StyledButton";
 import { useSelector, useDispatch } from "react-redux";
-import { switchProject } from "../../../reducers/currentProjectReducer";
-import { Store } from "../../../store/data";
+import { switchProject } from "../../../data/reducers/currentProjectReducer";
+import { Store } from "../../../data/store/data";
 
 const Menu = () => {
   const ids = useSelector((state: Store) =>

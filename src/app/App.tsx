@@ -1,9 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Dashboard from "../pages/Dashboard/Dashboard";
+import Dashboard from "../components/pages/Dashboard/Dashboard";
 import { GlobalResets } from "../tokens/resets";
-import { Provider } from 'react-redux';
-import store from "../store/store";
+import { Provider } from "react-redux";
+import store from "../data/store/store";
 import "./style.css";
 const App = () => {
   return (

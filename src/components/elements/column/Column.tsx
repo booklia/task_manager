@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Card from "../card/Card";
 import { Text } from "../../ui-kit/text/StyledText";
-import { Column as ColumnType } from "../../../store/data";
+import { Column as ColumnType } from "../../../data/store/data";
 
 const ColumnIcon = ({ color, ...rest }: { color: string }) => (
   <span color={color} {...rest}></span>

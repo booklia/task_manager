@@ -1,8 +1,8 @@
 import React from "react";
-import Menu from "../../components/blocks/menu/Menu";
-import Board from "../../components/blocks/board/Board";
+import Menu from "../../blocks/menu/Menu";
+import Board from "../../blocks/board/Board";
 import styled from "styled-components";
-import ModalContainer from "../../components/blocks/modalContainer/ModalContainer";
+import ModalContainer from "../../modals/modalContainer/ModalContainer";
 
 const Dashboard = () => {
   return (

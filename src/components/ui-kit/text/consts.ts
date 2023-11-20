@@ -3,6 +3,7 @@ import { css } from "styled-components";
 const COLOR = {
   TEXT_MAIN: "#333333",
   TEXT_SUBHEADING: "#7859CF",
+  TEXT_WHITE: "#FFFFFF",
 };
 
 const TEXT_TYPE = {
@@ -13,7 +14,7 @@ const TEXT_TYPE = {
   TASK_NAME: "taskName",
   SUBTASKS: "subtasks",
   MODAL_TEXT: "modalText",
-};
+} as const;
 
 const TextStyles = {
   [TEXT_TYPE.PROJECT_NAME]: css`
@@ -26,26 +27,22 @@ const TextStyles = {
     font-size: 30px;
     line-height: 40px;
     letter-spacing: 0.02em;
-    color: #333333;
   `,
   [TEXT_TYPE.COLUMN_NAME]: css`
     font-size: 24px;
     line-height: 30px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #333333;
   `,
   [TEXT_TYPE.INPUT_HEAD]: css`
     font-size: 24px;
     line-height: 30px;
     letter-spacing: 0em;
-    color: #333333;
   `,
   [TEXT_TYPE.TASK_NAME]: css`
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.02em;
-    color: #7859cf;
   `,
   [TEXT_TYPE.SUBTASKS]: css`
     font-size: 16px;

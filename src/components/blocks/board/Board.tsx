@@ -3,7 +3,7 @@ import { Text } from "../../ui-kit/text/StyledText";
 import Column from "../../elements/column/Column";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { Store } from "../../../store/data";
+import { Store } from "../../../data/store/data";
 
 const Board = () => {
   const currentProject = useSelector(
