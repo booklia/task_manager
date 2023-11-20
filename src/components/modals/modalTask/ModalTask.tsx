@@ -61,6 +61,9 @@ const StyledCross = styled.span`
   position: absolute;
   right: 20px;
   cursor: pointer;
+  ${"svg"} {
+    fill: #333;
+  }
 `;
 
 const StyledCheckboxes = styled.div`

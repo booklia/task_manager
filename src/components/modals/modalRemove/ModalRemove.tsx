@@ -3,6 +3,7 @@ import { Button } from "../../ui-kit/button/StyledButton";
 import styled from "styled-components";
 import { StyledModal } from "../modalStyles/ModalStyles";
 import { Text } from "../../ui-kit/text/StyledText";
+import { Cross } from "../../../static/icons";
 
 const REMOVE_TYPE = {
   PROJECT: "project",
@@ -18,6 +19,9 @@ type Props = {
 const ModalRemove = ({ type, removeId }: Props) => {
   return (
     <StyledModal type="modalRemove">
+      <StyledCross>
+        <Cross />
+      </StyledCross>
       <Text tagName="h3" texttype="modalHead" color="TEXT_WHITE">
         Удаление {type}
       </Text>
@@ -25,12 +29,21 @@ const ModalRemove = ({ type, removeId }: Props) => {
         Вы уверены, что хотите удалить {removeId}?
       </Text>
       <StyledDiv>
-        <Button buttontype={"modal delete"}>Да</Button>
-        <Button buttontype={"modal delete-cancel"}>Нет</Button>
+        <Button buttontype={"delete"}>Да</Button>
+        <Button buttontype={"delete-cancel"}>Нет</Button>
       </StyledDiv>
     </StyledModal>
   );
 };
+
+const StyledCross = styled.span`
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  ${"svg"} {
+    fill: #fff;
+  }
+`;
 
 const StyledDiv = styled.div`
   display: flex;

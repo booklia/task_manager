@@ -15,7 +15,6 @@ const StyledButton = styled.button<Props>`
   cursor: pointer;
   border-radius: 7px;
   ${({ buttontype }) => {
-    console.log(ButtonStyle[buttontype], buttontype);
     return ButtonStyle[buttontype];
   }}
   &:hover {

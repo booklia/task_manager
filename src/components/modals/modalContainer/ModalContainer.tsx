@@ -14,7 +14,7 @@ const ModalContainer = () => {
       {/*  <ModalCreate type={modalState.type} removeId={modalState.elementId} />*/}
       {/*)}*/}
       {/*{modalState.operation === "EDIT" && (*/}
-      {/*  <ModalEdit type={modalState.type} removeId={modalState.elementId} />*/}
+      <ModalEdit type={modalState.type} removeId={modalState.elementId} />
       {/*)}*/}
       {/*{modalState.operation === "DELETE" && (*/}
       {/*<ModalRemove type={modalState.type} removeId={modalState.elementId} />*/}

@@ -41,9 +41,13 @@ const ButtonStyle = {
   `,
   [ButtonType.DELETE]: css`
     color: ${COLOR.TEXT_DELETE};
+    width: 100%;
+    background-color: ${COLOR.BACKGROUND_MODAL};
   `,
   [ButtonType.DELETE_CANCEL]: css`
     color: ${COLOR.TEXT_DELETE};
+    width: 100%;
+
     background-color: ${COLOR.DISABLED_COLOR};
   `,
 };
